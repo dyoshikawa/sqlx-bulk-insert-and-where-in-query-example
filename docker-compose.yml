@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: dev
+    volumes:
+      - ./create_people_table.sql:/create_people_table.sql
+    ports:
+      - 3306:3306
