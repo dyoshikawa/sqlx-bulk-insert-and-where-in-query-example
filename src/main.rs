@@ -35,7 +35,7 @@ INSERT INTO people(name) VALUES
     println!("result: {}", res);
 
     // example: WHERE IN
-    let mut sql = "SELECT * FROM people WHERE id IN (".to_string();
+    let mut sql = "SELECT * FROM people WHERE name IN (".to_string();
     for (i, _) in names.iter().enumerate() {
         sql.push_str("?");
         if i < names.len() - 1 {
